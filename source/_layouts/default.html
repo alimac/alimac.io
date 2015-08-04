@@ -6,7 +6,17 @@
 </head>
 <body>
 
+<ul>
+  <li><a href="{{ site.url }}/">alimac.io</a></li>
+  <li><a href="{{ site.url }}/writes/">writes</a></li>
+  <li><a href="{{ site.url }}/about/">about</a></li>
+</ul>
+
 {% block content %}{% endblock %}
+
+<footer class="site">
+  &copy; {{ "now"|date("Y") }} alimac
+</footer>
 
 </body>
 </html>
