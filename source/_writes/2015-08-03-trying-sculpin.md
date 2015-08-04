@@ -1,5 +1,5 @@
 ---
-title: Tring Sculpin
+title: Trying Sculpin
 ---
 
 I am trying Sculpin as a static site generator for my blog.
