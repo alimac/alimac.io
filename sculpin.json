@@ -1,5 +1,6 @@
 {
   "require": {
+     "components/font-awesome": "4.2"
   },
   "config": {
     "component-dir": "source/components"
