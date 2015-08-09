@@ -7,6 +7,15 @@
 {% block meta %}
 <div>
   {{ page.date|date("l, j F Y") }}
+
+{% if page.tags %}
+  <p class="tags">
+  {% for tag in page.tags %}
+    <a href="{{ site.url }}/tag/{{ tag|url_encode(true) }}"><i class="fa fa-tags"></i> {{ tag }}</a>
+  {% endfor %}
+  </p>
+{% endif %}
+
 </div>
 {% endblock %}
 
