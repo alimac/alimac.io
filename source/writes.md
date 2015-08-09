@@ -9,7 +9,7 @@ use: [writes]
 <ul>
 {% for post in data.writes %}
   <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date|date("F Y") }}
   </li>
 {% endfor %}
 </ul>
