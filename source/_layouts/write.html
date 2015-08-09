@@ -4,5 +4,11 @@
 <h1> {{ page.title }} </h1>
 {% endblock %}
 
+{% block meta %}
+<div>
+  {{ page.date|date("l, j F Y") }}
+</div>
+{% endblock %}
+
 {% block content %}
 {% endblock %}
