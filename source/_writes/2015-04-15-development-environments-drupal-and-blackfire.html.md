@@ -3,6 +3,7 @@ title: Development environments, Drupal and Blackfire
 date: 2015-04-15
 tags:
   - drupal
+  - Drupal Planet
   - php
   - vagrant
   - sqlite
