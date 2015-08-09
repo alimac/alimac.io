@@ -2,8 +2,8 @@
 title: Global Drupal Sprint Weekend
 date: 2014-02-01
 tags:
-    - drupal
-    - Drupal Planet
+  - drupal
+  - Drupal Planet
 ---
 
 On January 26 I participated in [Drupal Global Sprint Weekend][].

@@ -2,9 +2,9 @@
 title: Hello, world
 date: 2014-01-26
 tags:
-    - middleman
-    - blogging
-    - open source
+  - middleman
+  - blogging
+  - open source
 ---
 
 This is my attempt at blogging with the static site generator [Middleman][].

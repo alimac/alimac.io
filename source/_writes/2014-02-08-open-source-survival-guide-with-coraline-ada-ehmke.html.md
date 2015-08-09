@@ -2,7 +2,7 @@
 title: Open Source Survival Guide with Coraline Ada Ehmke
 date: 2014-02-08
 tags:
-    - open source
+  - open source
 ---
 
 Yesterday I attended a talk by [Coraline Ada Ehmke][] titled _The Open Source
