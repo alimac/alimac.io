@@ -4,7 +4,7 @@ use: [writes]
 
 ---
 
-Writes!
+# /writes
 
 <ul>
 {% for post in data.writes %}
