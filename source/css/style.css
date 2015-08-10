@@ -102,11 +102,12 @@ a:hover {
   margin-bottom: 25px;
 }
 .blog-stub p {
-  font-style: italic;
-  color: #666;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #999;
 }
 .blog-stub a {
   font-weight: 600;
+  font-size: x-large;
 }
 
 /*
