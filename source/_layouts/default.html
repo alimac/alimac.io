@@ -14,11 +14,15 @@
 </head>
 <body>
 
-<ul>
-  <li><a href="{{ site.url }}/">alimac.io</a></li>
-  <li><a href="{{ site.url }}/writes/">writes</a></li>
-  <li><a href="{{ site.url }}/about/">about</a></li>
-</ul>
+<div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item" href="{{ site.url }}/">alimac.io</a>
+      <a class="blog-nav-item" href="{{ site.url }}/writes">writes</a>
+      <a class="blog-nav-item" href="{{ site.url }}/about">about</a>
+    </nav>
+  </div>
+</div>
 
 {% block post_title %}{% endblock %}
 {% block meta %}{% endblock %}
