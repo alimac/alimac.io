@@ -3,6 +3,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }}</title>
+
 </head>
 <body>
 
@@ -12,7 +14,7 @@
   <li><a href="{{ site.url }}/about/">about</a></li>
 </ul>
 
-{% block title %}{% endblock %}
+{% block post_title %}{% endblock %}
 {% block meta %}{% endblock %}
 
 {% block content %}{% endblock %}
