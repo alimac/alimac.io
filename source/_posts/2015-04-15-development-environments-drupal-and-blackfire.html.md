@@ -8,10 +8,9 @@ tags:
   - vagrant
   - sqlite
   - blackfire
+tagline: Blackfire is a PHP performance profiler I learned about at Drupal Developer Days in Montpelliér.
 ---
 
-Blackfire is a PHP performance profiler I learned about at Drupal Developer Days in Montpelliér. This post describes how I installed it to profile a Drupal 8 site.
-READMORE
 I installed Blackfire in two different environments:
 
 * local, light-weight environment (PHP 5.6, SQLite)

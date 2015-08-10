@@ -4,6 +4,7 @@ date: 2014-02-01
 tags:
   - drupal
   - Drupal Planet
+tagline: Setting up a local Drupal environment with MAMP.
 ---
 
 On January 26 I participated in [Drupal Global Sprint Weekend][].

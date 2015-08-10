@@ -5,6 +5,7 @@ tags:
   - middleman
   - blogging
   - open source
+tagline: Static site generators!
 ---
 
 This is my attempt at blogging with the static site generator [Middleman][].

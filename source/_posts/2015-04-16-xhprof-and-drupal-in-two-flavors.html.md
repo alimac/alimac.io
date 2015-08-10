@@ -7,10 +7,9 @@ tags:
   - xhprof
   - php
   - vagrant
+tagline: After my recent brush with Blackfire at Drupal Dev Days in Montpelliér, I decided to also give another PHP profiling tool a try.
 ---
 
-After my recent [brush with Blackfire](/writes/development-environments-drupal-and-blackfire/) at Drupal Dev Days in Montpelliér, I decided to also give another PHP profiling tool a try.
-READMORE
 **XHProf** is a "light-weight hierarchical and instrumentation based profiler" and the tool of choice used by sprinters in the [D8 Accelerate Performance](https://groups.drupal.org/node/464283) sprint.
 
 ## Environments

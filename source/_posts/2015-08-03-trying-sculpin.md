@@ -5,6 +5,7 @@ tags:
   - php
   - static site generator
   - sculpin
+tagline: Goodbye, Middleman. Hello, Sculpin.
 ---
 
 I am trying Sculpin as a static site generator for my blog.
