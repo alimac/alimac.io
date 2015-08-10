@@ -4,3 +4,23 @@ url:
 blog_url:
 author:
   name: "Alina Mackenzie"
+social:
+  twitter:
+    name: "twitter"
+    icon: "twitter"
+    url: https://twitter.com
+    username: czaroxiejka
+  drupal:
+    name: "drupal"
+    icon: "drupal"
+    url: https://www.drupal.org/u
+    username: alimac
+  github:
+    name: "github"
+    icon: "github"
+    url: https://github.com
+    username: alimac
+  rss:
+    name: "feed"
+    icon: "rss"
+    url: /atom.xml

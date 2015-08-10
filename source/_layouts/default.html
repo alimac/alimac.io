@@ -25,13 +25,18 @@
 
 {% block content %}{% endblock %}
 
-<footer class="site">
-  <ul>
-    <li><i class="fa fa-drupal"></i> <a href="https://www.drupal.org/u/alimac">alimac</a></li>
-    <li><i class="fa fa-twitter"></i> <a href="https://twitter.com/czaroxiejka">czaroxiejka</a></li>
-    <li><i class="fa fa-github"></i> <a href="https://github.com/alimac">alimac</a></li>
-    <li>&copy; {{ "now"|date("Y") }} alimac</li>
-  </ul>
+<footer class="blog-footer">
+  <div class="social">
+    <nav class="">
+{% for site in site.social %}
+      <a href="{{ site.url }}/{{ site.username }}"><i class="fa fa-{{ site.icon }}"></i> {{ site.name }}</a>
+{% endfor %}
+    </nav>
+  </div>
+
+  <div class="powered-by">
+    <strong>{{ site.title }}</strong> {{ "now"|date("Y") }} &mdash; powered by <a href="http://sculpin.io/" title="Sculpin">Sculpin</a>
+  </div>
 </footer>
 
 </body>
