@@ -25,9 +25,12 @@
 </div>
 
 <div class="container">
-{% block post_title %}
+{% block title_block %}
 <div class="blog-header">
   <h1 class="blog-title">{{ page.title }}</h1>
+{% if page.tagline %}
+  <p class="lead blog-description">{{ page.tagline }}</p>
+{% endif %}
 </div>
 {% endblock %}
 

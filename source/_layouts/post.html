@@ -1,12 +1,5 @@
 {% extends "default" %}
 
-{% block post_title %}
-<div class="blog-header">
-  <h1 class="blog-title">{{ page.title }}</h1>
-  <p class="lead blog-description">{{ page.tagline }}</p>
-</div>
-{% endblock %}
-
 {% block meta %}
 <div>
   {{ page.date|date("l, j F Y") }}
