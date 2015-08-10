@@ -96,6 +96,7 @@ a:hover {
 .blog-description {
   font-size: 20px;
   color: #999;
+  font-style: italic;
 }
 .blog-stub {
   margin-bottom: 25px;
