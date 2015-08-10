@@ -1,5 +1,5 @@
 ---
-use: ["writes"]
+use: ["posts"]
 permalink: atom.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
@@ -16,7 +16,7 @@ permalink: atom.xml
 </author>
 {% endif %}
 <generator uri="http://sculpin.io/">Sculpin</generator>
-{% for post in data.writes|slice(0, 10) %}
+{% for post in data.posts|slice(0, 10) %}
 <entry>
 <title type="html"><![CDATA[{{ post.title }}]]></title>
 <link href="{{ site.url }}{{ post.url }}"/>
