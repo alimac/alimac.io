@@ -1,6 +1,7 @@
 {
   "require": {
-     "components/font-awesome": "4.2"
+     "components/font-awesome": "4.2",
+     "components/bootstrap": "3.3.5"
   },
   "config": {
     "component-dir": "source/components"

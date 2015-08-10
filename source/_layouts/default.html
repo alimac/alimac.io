@@ -4,7 +4,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }}</title>
+  <link href="{{ site.url }}/components/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="{{ site.url }}/components/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
 
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
 
