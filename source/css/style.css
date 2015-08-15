@@ -20,10 +20,11 @@ h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #41aac4;
+  color: #c90612;
 }
 a:hover {
   text-decoration: none;
+  color: #57616c;
 }
 
 
@@ -44,7 +45,7 @@ a:hover {
 
 .blog-masthead {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #41aac4;
+  background-color: #c90612;
 }
 
 /* Nav links */
@@ -103,7 +104,7 @@ a:hover {
 }
 .blog-stub p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #999;
+  color: #666;
 }
 .blog-stub a {
   font-weight: 600;
@@ -189,8 +190,7 @@ a:hover {
   margin-right: 20px;
 }
 .blog-footer .social a:hover {
-  color: #ef6555;
-  color: #e45641;
+  color: #fff;
 }
 .blog-footer .powered-by a:hover {
   color: #ddd;
