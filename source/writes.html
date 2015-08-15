@@ -7,28 +7,22 @@ title: /writes
 ---
 
 {% for post in page.pagination.items %}
-{% set this_year %}{{ post.date | date("Y") }}{% endset %}
-{% if year != this_year %}
-  {% set month = '0' %}
-  {% set year = this_year %}
-{% endif %}
-{% set this_month %}{{ post.date | date("F") }}{% endset %}
-{% if month != this_month %}
-  {% set month = this_month %}
-  <h2>{{ month }} {{ year }}</h2>
-{% endif %}
-  <div class="blog-stub">
-    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-    <p>{{ post.tagline }}</p>
-  </div>
+<div class="post-preview">
+  <a href="{{ site.url }}{{ post.url }}">
+    <h2 class="post-title">{{ post.title }} </h2>
+    <h3 class="post-subtitle">{{ post.tagline }} </h3>
+  </a>
+  <p class="post-meta">posted by {% if post.author %}{{ post.author }}{% else %}alimac{% endif %} on {{ post.date|date("l, j F Y") }}</p>
+</div>
+<hr>
 {% endfor %}
 
 <div>
 {% if page.pagination.previous_page or page.pagination.next_page %}
-    <nav class="article clearfix">
-    {% if page.pagination.previous_page %}
-    <a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Previous Page"><span class="title">Previous Page</span></a>
-    {% endif %}
+  <nav class="article clearfix">
+  {% if page.pagination.previous_page %}
+  <a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Previous Page"><span class="title">Previous Page</span></a>
+  {% endif %}
     {% if page.pagination.next_page %}
     <a class="next" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Next Page"><span class="title">Next Page</span></a>
     {% endif %}
