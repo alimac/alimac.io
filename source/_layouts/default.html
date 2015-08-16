@@ -98,7 +98,7 @@
         <ul class="list-inline text-center">
 {% for site in site.social %}
           <li>
-            <a href="{{ site.url }}/{{ site.username }}">
+            <a href="{{ site.url }}{% if site.username %}/{{ site.username }}{% endif %}">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-{{ site.icon }} fa-stack-1x fa-inverse"></i>
