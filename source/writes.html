@@ -14,7 +14,7 @@ header: /images/hostel-table.jpg
     <h2 class="post-title">{{ post.title }} </h2>
     <h3 class="post-subtitle">{{ post.tagline }} </h3>
   </a>
-  {% include "post-meta" %}
+  {% include "post-meta" with {post_date: post.date} %}
 </div>
 <hr>
 {% endfor %}
