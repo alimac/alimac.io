@@ -13,7 +13,7 @@ header: /images/hostel-table.jpg
     <h2 class="post-title">{{ post.title }} </h2>
     <h3 class="post-subtitle">{{ post.tagline }} </h3>
   </a>
-  <p class="post-meta">posted by {% if post.author %}{{ post.author }}{% else %}alimac{% endif %} on {{ post.date|date("l, j F Y") }}</p>
+  {% include "post-meta" %}
 </div>
 <hr>
 {% endfor %}

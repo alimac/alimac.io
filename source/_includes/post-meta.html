@@ -1,0 +1,19 @@
+<p class="post-meta">
+ <span class="attribution">
+Posted by
+{% if page.author %}
+  {{ page.author.username }}
+{% else %}
+  {{ site.author.username }}
+{% endif %}
+on {{ page.date|date("j F Y") }}
+  </span>
+
+{% if page.tags %}
+  <span class="tags">
+  {% for tag in page.tags %}
+    <a href="{{ site.url }}/tag/{{ tag|url_encode(true) }}"><i class="fa fa-tags"></i> {{ tag }}</a>
+  {% endfor %}
+  </span>
+{% endif %}
+</p>

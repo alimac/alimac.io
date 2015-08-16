@@ -4,6 +4,25 @@
 }
 
 .post-preview>a:hover,
+.meta-section a:hover,
 a:hover {
   color: #c71c1e;
+}
+
+.meta-section {
+  background: #404040;
+  color: #fff;
+}
+.meta-section a {
+  color: #aaa;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 800
+}
+.meta-section .tags,
+.meta-section .attribution {
+  margin-right: 15px;
+  display: inline-block;
 }
