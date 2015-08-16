@@ -1,5 +1,5 @@
 ---
-draft: true
+header: /images/2015-08-15-suggested-sessions-drupalcon-barcelona/large-conference-room.jpg
 date: 2015-08-15
 title: Suggested sessions at DrupalCon Barcelona
 tagline: For new and experienced contributors, mentors and sprint participants
