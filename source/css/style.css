@@ -24,6 +24,10 @@ a:hover {
 }
 .meta-section .tags,
 .meta-section .attribution {
-  margin-right: 15px;
+  margin-right: 30px;
   display: inline-block;
+}
+.meta-section .tags a {
+  display: inline-block;
+  margin-right: 10px;
 }
