@@ -1,6 +1,7 @@
 ---
 title: Post-travel survival guide
 date: 2015-04-21
+header: /images/2015-04-21-post-travel-survival-guide/backpack.jpg
 tags:
   - travel
   - mental health
