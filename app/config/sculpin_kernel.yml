@@ -1,3 +1,4 @@
 sculpin_content_types:
     posts:
         permalink: writes/:basename/
+        publish_drafts: false
