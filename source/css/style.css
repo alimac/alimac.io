@@ -41,3 +41,6 @@ a:hover {
 h4 {
   margin-top: 23px;
 }
+blockquote p {
+  margin-top: 0px;
+}
