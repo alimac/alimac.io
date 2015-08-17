@@ -19,7 +19,10 @@ I have the means and documents to travel. Neither was always the case, so I appr
 
 Travel is exhilarating, exciting, and exhausting. Over time I learned some important lessons in dealing with post-travel returns.
 
-<img src="/images/2015-04-21-post-travel-survival-guide/chicago-now-boarding.jpg">
+<img class="img-responsive" src="/images/2015-04-21-post-travel-survival-guide/chicago-now-boarding.jpg">
+<span class="caption text-muted">
+  "Now boarding" sign at the Hong Kong International Airport.
+</span>
 
 ## Leave no trace
 
