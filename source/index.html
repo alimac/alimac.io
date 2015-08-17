@@ -1,6 +1,29 @@
 ---
 layout: default
 title: alimac.io
+use: ["posts"]
 tagline: Hello, world.
 header: /images/tabby-cat.jpg
 ---
+
+
+{% block content %}
+<div class="front-page">
+  <div class="col-sm-4">
+    <h2><a href="{{ site.url }}/writes">/writes</a></h2>
+
+{% for post in data.posts|slice(0, 2) %}
+<div class="post-preview">
+  <a href="{{ site.url }}{{ post.url }}">
+    <h2 class="post-title">{{ post.title }} </h2>
+    <h3 class="post-subtitle">{{ post.tagline }} </h3>
+  </a>
+  {% include "post-meta" with {post_date: post.date} %}
+</div>
+<hr>
+{% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}
