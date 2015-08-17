@@ -214,3 +214,5 @@ When profiling is finished, click on *View Profile* button to view the full prof
 <span class="caption text-muted">
 View Profile screen
 </span>
+
+To be continued...
