@@ -68,11 +68,10 @@ Press Ctrl-C to quit.
 The directory you run the command from will be treated as the root web directory.
 You can visit http://localhost:8888 to view the site. If there is no `index.php` file, you will get an error:
 
-> **Not Found**
->
-> The requested resource / was not found on this server.
-
-<img src="/images/2015-04-15-development-environments-drupal-and-blackfire/not-found.png">
+<img class="img-responsive" src="/images/2015-04-15-development-environments-drupal-and-blackfire/not-found.png">
+<span class="caption text-muted">
+Error: **Not Found** The requested resource / was not found on this server.
+</span>
 
 No worries, it means the web server is up and running.
 
@@ -203,8 +202,15 @@ Since the steps are fairly straightforward, I am not going to repeat them here. 
 
 To profile Drupal 8, click on the Blackfire icon, select an empty profile slot, and click the *Profile!* button. You will see a progress bar as the site is profiled by Blackfire:
 
-<img src="/images/2015-04-15-development-environments-drupal-and-blackfire/blackfire-profiling.png">
+<img class="img-responsive" src="/images/2015-04-15-development-environments-drupal-and-blackfire/blackfire-profiling.png">
+<span class="caption text-muted">
+Blackfire profiling progress bar
+</span>
+
 
 When profiling is finished, click on *View Profile* button to view the full profile.
 
-<img src="/images/2015-04-15-development-environments-drupal-and-blackfire/blackfire-profiled-drupal-site.png">
+<img class="img-responsive" src="/images/2015-04-15-development-environments-drupal-and-blackfire/blackfire-profiled-drupal-site.png">
+<span class="caption text-muted">
+View Profile screen
+</span>
