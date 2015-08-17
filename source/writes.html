@@ -19,15 +19,18 @@ header: /images/hostel-table.jpg
 <hr>
 {% endfor %}
 
-<div>
 {% if page.pagination.previous_page or page.pagination.next_page %}
-  <nav class="article clearfix">
-  {% if page.pagination.previous_page %}
-  <a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Previous Page"><span class="title">Previous Page</span></a>
-  {% endif %}
-    {% if page.pagination.next_page %}
-    <a class="next" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Next Page"><span class="title">Next Page</span></a>
-    {% endif %}
-    </nav>
+<!-- Pager -->
+<ul class="pager">
+{% if page.pagination.next_page %}
+<li class="next">
+  <a href="{{ site.url }}{{ page.pagination.next_page.url }}">Older Posts &rarr;</a>
+</li>
 {% endif %}
-</div>
+{% if page.pagination.previous_page %}
+<li class="next">
+  <a href="{{ site.url }}{{ page.pagination.previous_page.url }}">&larr; Newer Posts</a>
+</li>
+{% endif %}
+</ul>
+{% endif %}
