@@ -174,8 +174,6 @@ Click *Save configuration* to finish.
 
 To run an XHProf profile, visit any page of your site and scroll down to the bottom. You should see a link titled **XHProf output**. Click on the link to access the XHProf report.
 
-<img src="/images/2015-04-16-xhprof-and-drupal-in-two-flavors/xhprof-module-report.png">
-
 ### XHProf native output
 
 XHProf also has a way to display output in its own pages. This view includes additional data that is not displayed in the Drupal module output.
@@ -192,8 +190,4 @@ Then add the following line:
 192.168.88.88   local.xhprof.com
 ~~~
 
-Now in the browser, visit: [local.xhprof.com](http://local.xhprof.com) to view the profiling results:
-
-<img src="/images/2015-04-16-xhprof-and-drupal-in-two-flavors/local-xhprof-com.png">
-
-
+Now in the browser, visit: [local.xhprof.com](http://local.xhprof.com) to view the profiling results.
