@@ -115,7 +115,7 @@ events:
 
 See you in Barcelona!
 
-<h2 id="summary">Summary</h2>
+## Summary
 
 ### Tuesday, 22 September
 
