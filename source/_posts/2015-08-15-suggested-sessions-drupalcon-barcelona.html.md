@@ -109,9 +109,9 @@ On Friday it is time for contributors, mentors and first-time sprint
 participants to pull all of the week’s preparation to work at the following
 events:
 
-- **9:00** [First Time Sprinter Workshop](https://events.drupal.org/barcelona2015/first-time-sprinter-workshop)
-- **9:00** [Mentored Core Sprint](https://events.drupal.org/barcelona2015/mentored-core-sprint)
-- **9:00** [General sprints](https://events.drupal.org/barcelona2015/friday-general-sprint)
+- 9:00 [First Time Sprinter Workshop](https://events.drupal.org/barcelona2015/first-time-sprinter-workshop)
+- 9:00 [Mentored Core Sprint](https://events.drupal.org/barcelona2015/mentored-core-sprint)
+- 9:00 [General sprints](https://events.drupal.org/barcelona2015/friday-general-sprint)
 
 See you in Barcelona!
 
@@ -119,33 +119,33 @@ See you in Barcelona!
 
 ### Tuesday, 22 September
 
-- **11:00** [Altering, Extending, and Enhancing Drupal 8](https://events.drupal.org/barcelona2015/sessions/altering-extending-and-enhancing-drupal-8)
-- **13:00** [Content Strategy for Drupal.org](https://events.drupal.org/barcelona2015/sessions/content-strategy-drupalorg)
-- **14:15** [Docker in the DrupalCI test infrastructure](https://events.drupal.org/barcelona2015/sessions/docker-drupalci-test-infrastructure)
-- **15:45** [Composer and Drupal 8](https://events.drupal.org/barcelona2015/sessions/composer-and-drupal-8)
-- **15:45** [Drupal 8 The Backend of Frontend](https://events.drupal.org/barcelona2015/sessions/drupal-8-theme-system)
-- **15:45** Mentor Orientation
-- **17:00** Mentor Demonstration
+- 11:00 [Altering, Extending, and Enhancing Drupal 8](https://events.drupal.org/barcelona2015/sessions/altering-extending-and-enhancing-drupal-8)
+- 13:00 [Content Strategy for Drupal.org](https://events.drupal.org/barcelona2015/sessions/content-strategy-drupalorg)
+- 14:15 [Docker in the DrupalCI test infrastructure](https://events.drupal.org/barcelona2015/sessions/docker-drupalci-test-infrastructure)
+- 15:45 [Composer and Drupal 8](https://events.drupal.org/barcelona2015/sessions/composer-and-drupal-8)
+- 15:45 [Drupal 8 The Backend of Frontend](https://events.drupal.org/barcelona2015/sessions/drupal-8-theme-system)
+- 15:45 Mentor Orientation
+- 17:00 Mentor Demonstration
 
 ### Wednesday, 23 September
 
-- **10:45** [Avoiding and surviving of contribution burnout](://events.drupal.org/barcelona2015/sessions/avoiding-contribution-burnout)
-- **10:45** [Pull requests are coming to Drupal.org](https://events.drupal.org/barcelona2015/sessions/pull-requests-are-coming-drupalorg)
-- **13:00** [Pain Points of Contribution in the Drupal Community](https://events.drupal.org/barcelona2015/sessions/pain-points-contribution-drupal-community)
-- **14:15** [The Future of Mentoring](https://events.drupal.org/barcelona2015/sessions/future-mentoring)
-- **17:00** [Planning for Drupal 8.1.x, 8.2.x, and our future together](://events.drupal.org/barcelona2015/sessions/planning-drupal-81x-82x)
+- 10:45 [Avoiding and surviving of contribution burnout](://events.drupal.org/barcelona2015/sessions/avoiding-contribution-burnout)
+- 10:45 [Pull requests are coming to Drupal.org](https://events.drupal.org/barcelona2015/sessions/pull-requests-are-coming-drupalorg)
+- 13:00 [Pain Points of Contribution in the Drupal Community](https://events.drupal.org/barcelona2015/sessions/pain-points-contribution-drupal-community)
+- 14:15 [The Future of Mentoring](https://events.drupal.org/barcelona2015/sessions/future-mentoring)
+- 17:00 [Planning for Drupal 8.1.x, 8.2.x, and our future together](://events.drupal.org/barcelona2015/sessions/planning-drupal-81x-82x)
 
 ### Thursday, 24 September
 
-- **10:45** [Let’s Keep Talking About Documentation](https://events.drupal.org/barcelona2015/sessions/let%E2%80%99s-keep-talking-about-documentation)
-- **13:00** [Herding cats, gatos, macskák and γάτες - open source project management in the Drupal community, lessons from the multilingual team](https://events.drupal.org/barcelona2015/sessions/herding-cats-gatos-macsk%C3%A1k-and-%CE%B3%CE%AC%CF%84%CE%B5%CF%82-open-source-project-management-drupal)
-- **13:00** [PhpStorm for Drupal Development](https://events.drupal.org/barcelona2015/sessions/phpstorm-drupal-development)
-- **13:00** [Paid contribution: past, present, and future](https://events.drupal.org/barcelona2015/sessions/paid-contribution-past-present-and-future)
-- **14:15** [Drupal 8 retrospective with Dries](https://events.drupal.org/barcelona2015/sessions/drupal-8-retrospective-dries)
+- 10:45 [Let’s Keep Talking About Documentation](https://events.drupal.org/barcelona2015/sessions/let%E2%80%99s-keep-talking-about-documentation)
+- 13:00 [Herding cats, gatos, macskák and γάτες - open source project management in the Drupal community, lessons from the multilingual team](https://events.drupal.org/barcelona2015/sessions/herding-cats-gatos-macsk%C3%A1k-and-%CE%B3%CE%AC%CF%84%CE%B5%CF%82-open-source-project-management-drupal)
+- 13:00 [PhpStorm for Drupal Development](https://events.drupal.org/barcelona2015/sessions/phpstorm-drupal-development)
+- 13:00 [Paid contribution: past, present, and future](https://events.drupal.org/barcelona2015/sessions/paid-contribution-past-present-and-future)
+- 14:15 [Drupal 8 retrospective with Dries](https://events.drupal.org/barcelona2015/sessions/drupal-8-retrospective-dries)
 
 ### Friday, 25 September
 
-- **9:00** [First Time Sprinter Workshop](https://events.drupal.org/barcelona2015/first-time-sprinter-workshop)
-- **9:00** [Mentored Core Sprint](https://events.drupal.org/barcelona2015/mentored-core-sprint)
-- **9:00** [General sprints](https://events.drupal.org/barcelona2015/friday-general-sprint)
+- 9:00 [First Time Sprinter Workshop](https://events.drupal.org/barcelona2015/first-time-sprinter-workshop)
+- 9:00 [Mentored Core Sprint](https://events.drupal.org/barcelona2015/mentored-core-sprint)
+- 9:00 [General sprints](https://events.drupal.org/barcelona2015/friday-general-sprint)
 
