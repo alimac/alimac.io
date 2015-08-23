@@ -7,7 +7,7 @@
   background-size: cover;
 }
 
-.front-page h2 a:hover,
+h2.section-heading a:hover,
 .post-preview>a:hover,
 .meta-section a:hover,
 a:hover {
@@ -19,9 +19,10 @@ a:hover {
   background: #404040;
   color: #fff;
 }
-.front-page h2 a,
+h2.section-heading,
+h2.section-heading a,
 .meta-section a {
-  color: #aaa;
+  color: #999;
   text-decoration: none;
   text-transform: uppercase;
   font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;

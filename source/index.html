@@ -8,62 +8,57 @@ header: /images/tabby-cat.jpg
 
 
 {% block content %}
-<div class="front-page">
-  <div class="col-sm-4">
-    <h2><a href="{{ site.url }}/writes">/writes</a></h2>
+<div class="col-sm-4">
+  <h2 class="section-heading"><a href="{{ site.url }}/writes">/writes</a></h2>
 
 {% for post in data.posts|slice(0, 2) %}
-<div class="post-preview">
-  <a href="{{ site.url }}{{ post.url }}">
-    <h2 class="post-title">{{ post.title }} </h2>
-    <h3 class="post-subtitle">{{ post.tagline }} </h3>
-  </a>
-  {% include "post-meta" with {post_date: post.date} %}
-</div>
-<hr>
+  <div class="post-preview">
+    <a href="{{ site.url }}{{ post.url }}">
+      <h2 class="post-title">{{ post.title }} </h2>
+      <h3 class="post-subtitle">{{ post.tagline }} </h3>
+    </a>
+    {% include "post-meta" with {post_date: post.date} %}
+  </div>
+  <hr>
 {% endfor %}
 
-  </div>
+</div>
 
 <div class="col-sm-4">
-    <h2><a href="{{ site.url }}/talks">/talks</a></h2>
+  <h2 class="section-heading"><a href="{{ site.url }}/talks">/talks</a></h2>
 
 {% set talk_count = 0 %}
 {% for talk in data.talks %}
 {% if date(talk.date) < date() and talk_count < 2 %}
 {% set talk_count = talk_count + 1 %}
-<div class="post-preview">
-  <a href="{{ site.url }}{{ talk.url }}">
-    <h2 class="post-title">{{ talk.title }} </h2>
-    <h3 class="post-subtitle">{{ talk.event }} </h3>
-  </a>
-  {% include "talk-meta" with {talk_date: talk.date} %}
-</div>
-<hr>
+  <div class="post-preview">
+    <a href="{{ site.url }}{{ talk.url }}">
+      <h2 class="post-title">{{ talk.title }} </h2>
+      <h3 class="post-subtitle">{{ talk.event }} </h3>
+    </a>
+    {% include "talk-meta" with {talk_date: talk.date} %}
+  </div>
+  <hr>
 {% endif %}
 {% endfor %}
 
-  </div>
-
+</div>
 
 <div class="col-sm-4">
-    <h2><a href="{{ site.url }}/talks">/upcoming</a></h2>
+  <h2 class="section-heading"><a href="{{ site.url }}/talks">/upcoming</a></h2>
 
 {% for talk in data.talks|reverse %}
 {% if date(talk.date) > date() %}
-<div class="post-preview">
-  <a href="{{ site.url }}{{ talk.url }}">
-    <h2 class="post-title">{{ talk.title }} </h2>
-    <h3 class="post-subtitle">{{ talk.event }} </h3>
-  </a>
-  {% include "talk-meta" with {talk_date: talk.date} %}
-</div>
-<hr>
+  <div class="post-preview">
+    <a href="{{ site.url }}{{ talk.url }}">
+      <h2 class="post-title">{{ talk.title }} </h2>
+      <h3 class="post-subtitle">{{ talk.event }} </h3>
+    </a>
+    {% include "talk-meta" with {talk_date: talk.date} %}
+  </div>
+  <hr>
 {% endif %}
 {% endfor %}
 
-  </div>
-
 </div>
-
 {% endblock %}
