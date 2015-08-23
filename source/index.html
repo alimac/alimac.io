@@ -45,6 +45,25 @@ header: /images/tabby-cat.jpg
 
   </div>
 
+
+<div class="col-sm-4">
+    <h2><a href="{{ site.url }}/talks">/upcoming</a></h2>
+
+{% for talk in data.talks|reverse %}
+{% if date(talk.date) > date() %}
+<div class="post-preview">
+  <a href="{{ site.url }}{{ talk.url }}">
+    <h2 class="post-title">{{ talk.title }} </h2>
+    <h3 class="post-subtitle">{{ talk.event }} </h3>
+  </a>
+  {% include "talk-meta" with {talk_date: talk.date} %}
+</div>
+<hr>
+{% endif %}
+{% endfor %}
+
+  </div>
+
 </div>
 
 {% endblock %}
