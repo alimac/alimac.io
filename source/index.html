@@ -1,7 +1,7 @@
 ---
 layout: default
 title: alimac.io
-use: ["posts"]
+use: ["posts", "talks"]
 tagline: Hello, world.
 header: /images/tabby-cat.jpg
 ---
@@ -24,6 +24,23 @@ header: /images/tabby-cat.jpg
 {% endfor %}
 
   </div>
+
+<div class="col-sm-4">
+    <h2><a href="{{ site.url }}/talks">/talks</a></h2>
+
+{% for talk in data.talks|slice(0, 2) %}
+<div class="post-preview">
+  <a href="{{ site.url }}{{ talk.url }}">
+    <h2 class="post-title">{{ talk.title }} </h2>
+    <h3 class="post-subtitle">{{ talk.event }} </h3>
+  </a>
+  {% include "talk-meta" with {talk_date: talk.date} %}
+</div>
+<hr>
+{% endfor %}
+
+  </div>
+
 </div>
 
 {% endblock %}
