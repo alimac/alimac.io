@@ -1,3 +1,5 @@
 sculpin_content_types:
     posts:
         permalink: writes/:basename/
+    talks:
+        permalink: talks/:basename/
