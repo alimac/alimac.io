@@ -28,7 +28,10 @@ header: /images/tabby-cat.jpg
 <div class="col-sm-4">
     <h2><a href="{{ site.url }}/talks">/talks</a></h2>
 
-{% for talk in data.talks|slice(0, 2) %}
+{% set talk_count = 0 %}
+{% for talk in data.talks %}
+{% if date(talk.date) < date() and talk_count < 2 %}
+{% set talk_count = talk_count + 1 %}
 <div class="post-preview">
   <a href="{{ site.url }}{{ talk.url }}">
     <h2 class="post-title">{{ talk.title }} </h2>
@@ -37,6 +40,7 @@ header: /images/tabby-cat.jpg
   {% include "talk-meta" with {talk_date: talk.date} %}
 </div>
 <hr>
+{% endif %}
 {% endfor %}
 
   </div>
