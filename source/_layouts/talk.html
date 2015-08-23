@@ -1,0 +1,33 @@
+{% extends "default" %}
+
+{% block subheading %}
+{{ page.event }}
+{% endblock %}
+
+{% block content_wrapper %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 blog-main">
+      <div class="blog-post">
+
+{% block content %}{% endblock %}
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block meta %}
+<section class="meta-section">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10">
+
+{% include "talk-meta" with {talk_date: page.date} %}
+
+    </div>
+  </div>
+</div>
+</section>
+{% endblock %}
