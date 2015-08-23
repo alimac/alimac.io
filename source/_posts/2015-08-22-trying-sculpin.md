@@ -13,7 +13,7 @@ The first static site generator I worked with was [Middleman](http://www.middlem
 I was inspired by Julie Pagano’s
 [Site Redesign Using Middleman](http://juliepagano.com/blog/2013/11/10/site-redesign-using-middleman/).
 I will always be grateful to Julie for making the repository public at the time.
-It was a fantastic resource, and I ended up making my very first pull request.
+It was a fantastic resource.
 
 I was first introduced to [Sculpin](http://sculpin.io) by Ashley Cyborski’s
 [Fish Sticks: A Designer’s Adventure with Twig and Sculpin](http://2014.midcamp.org/session/fish-sticks-designers-adventure-twig-and-sculpin) session at the very first [MidCamp](http://midcamp.org) (Midwest Drupal Camp).
