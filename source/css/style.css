@@ -52,3 +52,6 @@ blockquote p {
   border-top: 5px solid #eee;
   padding: 10px 0;
 }
+.bg-highlight {
+  background: #f9f9f9;
+}

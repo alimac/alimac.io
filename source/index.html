@@ -44,7 +44,7 @@ header: /images/tabby-cat.jpg
 
 </div>
 
-<div class="col-sm-4">
+<div class="col-sm-4 bg-highlight">
   <h2 class="section-heading"><a href="{{ site.url }}/talks">/upcoming</a></h2>
 
 {% for talk in data.talks|reverse %}
@@ -56,7 +56,6 @@ header: /images/tabby-cat.jpg
     </a>
     {% include "talk-meta" with {talk_date: talk.date} %}
   </div>
-  <hr>
 {% endif %}
 {% endfor %}
 

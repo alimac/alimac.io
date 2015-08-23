@@ -7,7 +7,24 @@ header:
 
 ---
 
-<div class="col-sm-6">
+<div class="col-sm-4 bg-highlight">
+  <h2 class="section-heading">Upcoming</h2>
+
+{% for talk in data.talks|reverse %}
+{% if date(talk.date) > date() %}
+  <div class="post-preview">
+    <a href="{{ site.url }}{{ talk.url }}">
+      <h2 class="post-title">{{ talk.title }} </h2>
+      <h3 class="post-subtitle">{{ talk.event }} </h3>
+    </a>
+    {% include "talk-meta" with {talk_date: talk.date} %}
+  </div>
+{% endif %}
+{% endfor %}
+
+</div>
+
+<div class="col-sm-8">
   <h2 class="section-heading">Past</h2>
 
 {% for talk in data.talks %}
