@@ -55,3 +55,6 @@ blockquote p {
 .bg-highlight {
   background: #f9f9f9;
 }
+.front-page .post-preview a h2 {
+  font-size: 28px;
+}
