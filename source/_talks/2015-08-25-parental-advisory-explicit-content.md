@@ -2,6 +2,7 @@
 date: 2015-08-25
 event: DevOpsDays Chicago 2015
 title: Parental Advisory: Explicit Content
+header: /images/2015-08-25-parental-advisory-explicit-content/header.jpg
 tags:
   - devops
 
