@@ -14,7 +14,7 @@ made it a very interesting talk to plan and execute.
 
 ## Transcript
 
-This is Parental Advisory Explicit Content. My name is Alina Mackenzie. I am
+This is _Parental Advisory Explicit Content_. My name is Alina Mackenzie. I am
 a sysadmin and developer based in Chicago. And I grew up in the 80s and 90s :)
 
 Once upon a time there was a team of people working on software and systems.
@@ -28,6 +28,8 @@ lessons learned from making things explicit to myself, and other people.
 Number one: **talk in public**. When two people talk in public, a third one
 listens. Fourth one learns. And a fifth one will correct something that one of
 the other people had said.
+
+### Expose your ignorance
 
 Instincts tell us to hide our ignorance and feign expert knowledge. “Fake it
 till you make it”, right?  But this can slow us down. Remember, expertise should
@@ -49,12 +51,12 @@ For people of all skills to become comfortable with exposing their ignorance,
 they need an environment in which it is safe to do so. An environment in which
 asking questions is welcomed, and asking for help is not seen as weakness.
 
-Record everything you learn, in public, and in private. Your public record is
+**Record everything you learn**, in public, and in private. Your public record is
 a way of sharing the lessons you learn and getting feedback from your community.
 Your private record is where you can be painfully honest about where you are in
 your journey.
 
-It is better to share what we know than to create scarcity by hoarding it.
+It is better to **share what you know** than to create scarcity by hoarding it.
 When you learn about something, you should always be teaching. When one person
 teaches another, two people learn.
 
@@ -66,9 +68,11 @@ Do you work on things that no one else in your organization knows about?
 (_in Gollum voice_) My precioussss.. Stop. Make your work explicit. Become the
 protagonist of your very own user story.
 
-Reflect on how you work, and be explicit about this, too. Write down your current
+**Reflect on how you work**, and be explicit about this, too. Write down your current
 set of practices, without any shame or judgment. Look for places where you can
 inject small improvements.
+
+### Empty the cup
 
 There is a story of a young philosopher came to visit a zen master. Every time
 the master tried to speak, the excited philosopher kept on interrupting, so very
@@ -90,6 +94,13 @@ frustrated by the ever-changing demands of the client.
 So, I emptied my cup (of bad habits). In the next sprint, with my team’s support
 I took the risk to build the creature’s wings. Our team ended up scoring best,
 and winning the satisfaction of the client.
+
+> <i class="fa fa-quote-left"></i>
+> The only people who achieve much are those who want knowledge so bad that
+> they seek it while <span class="highlight">the conditions are still unfavorable.</span>
+> <i class="fa fa-quote-right"></i>
+> &mdash; C.S. Lewis
+
 
 Too often we keep waiting for favorable conditions that will never come.
 Sometimes waiting until you are ready is a recipe for never doing a thing.
