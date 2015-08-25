@@ -82,6 +82,11 @@ I was once on a team tasked with building an animal out of legos at a workshop.
 As we started work I noticed that instead working with the team I became easily
 frustrated by the ever-changing demands of the client.
 
+<img class="img-responsive" src="/images/2015-08-25-parental-advisory-explicit-content/lego-animal.jpg">
+<span class="caption text-muted">
+  Winged animal creature with wheels, made out legos.
+</span></p>
+
 So, I emptied my cup (of bad habits). In the next sprint, with my team’s support
 I took the risk to build the creature’s wings. Our team ended up scoring best,
 and winning the satisfaction of the client.
