@@ -9,9 +9,9 @@ generator: [posts_tag_index]
     <link href="{{ site.url }}/"/>
     <updated>{{ site.calculated_date | date('c') }}</updated>
     <id>{{ site.url }}/</id>
-    {% if site.author or site.email %}
+    {% if site.author.name or site.author.email %}
         <author>
-            {% if site.author.name %}<name><![CDATA[{{ site.authorauthor.name }}]]></name>{% endif %}
+            {% if site.author.name %}<name><![CDATA[{{ site.author.name }}]]></name>{% endif %}
             {% if site.author.email %}<email><![CDATA[{{ site.author.email }}]]></email>{% endif %}
         </author>
     {% endif %}
