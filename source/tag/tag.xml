@@ -23,6 +23,7 @@ generator: [posts_tag_index]
     <updated>{{ post.date|date('c') }}</updated>
     <id>{{ site.url }}{{ post.url }}</id>
     <content type="html"><![CDATA[{{ post.blocks.content|raw }}]]></content>
+    <summary>{{ post.blocks.content[:600]|striptags ~ '...' }}</summary>
   </entry>
 {% endfor %}
 </feed>
