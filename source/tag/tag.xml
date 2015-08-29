@@ -4,25 +4,25 @@ generator: [posts_tag_index]
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title><![CDATA[{{ site.title }}]]></title>
-    <link href="{{ site.url }}{{ page.url|replace({' ': '%20'}) }}" rel="self"/>
-    <link href="{{ site.url }}/"/>
-    <updated>{{ site.calculated_date | date('c') }}</updated>
-    <id>{{ site.url }}/</id>
-    {% if site.author.name or site.author.email %}
-        <author>
-            {% if site.author.name %}<name><![CDATA[{{ site.author.name }}]]></name>{% endif %}
-            {% if site.author.email %}<email><![CDATA[{{ site.author.email }}]]></email>{% endif %}
-        </author>
-    {% endif %}
-    <generator uri="http://sculpin.io/">Sculpin</generator>
-    {% for post in page.tag_posts|slice(0, 10) %}
-        <entry>
-            <title type="html"><![CDATA[{{ post.title }}]]></title>
-            <link href="{{ site.url }}{{ post.url }}"/>
-            <updated>{{ post.date|date('c') }}</updated>
-            <id>{{ site.url }}{{ post.url }}</id>
-            <content type="html"><![CDATA[{{ post.blocks.content|raw }}]]></content>
-        </entry>
-    {% endfor %}
+  <title><![CDATA[{{ site.title }}]]></title>
+  <link href="{{ site.url }}{{ page.url|replace({' ': '%20'}) }}" rel="self"/>
+  <link href="{{ site.url }}/"/>
+  <updated>{{ site.calculated_date | date('c') }}</updated>
+  <id>{{ site.url }}/</id>
+{% if site.author.name or site.author.email %}
+  <author>
+    {% if site.author.name %}<name><![CDATA[{{ site.author.name }}]]></name>{% endif %}
+    {% if site.author.email %}<email><![CDATA[{{ site.author.email }}]]></email>{% endif %}
+  </author>
+{% endif %}
+  <generator uri="http://sculpin.io/">Sculpin</generator>
+{% for post in page.tag_posts|slice(0, 10) %}
+  <entry>
+    <title type="html"><![CDATA[{{ post.title }}]]></title>
+    <link href="{{ site.url }}{{ post.url }}"/>
+    <updated>{{ post.date|date('c') }}</updated>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <content type="html"><![CDATA[{{ post.blocks.content|raw }}]]></content>
+  </entry>
+{% endfor %}
 </feed>
