@@ -7,7 +7,7 @@ pagination:
 ---
 
 {% block title %}{{ page.tag }}{% endblock %}
-{% block header_title %}{{ page.tag }}{% endblock %}
+{% block header_title %}{{ page.tag|capitalize }}{% endblock %}
 {% block content %}
 {% for post in page.pagination.items %}
 <div class="post-preview">
