@@ -13,6 +13,9 @@
   background-size: cover;
 }
 
+.navbar {
+  background: rgba(0, 0, 0, .25);
+}
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .nav li a:hover,
 h2.section-heading a:hover,
