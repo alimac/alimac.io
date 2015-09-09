@@ -1,7 +1,10 @@
 ---
 date: 2014-11-09
 title: Getting started with Vagrant
-event: BADCamp 2014
+event:
+  name: BADCamp 2014
+  location: San Francisco, CA
+  website: https://2014.badcamp.net
 slides: https://speakerdeck.com/alimac/getting-started-with-vagrant
 code: https://github.com/alimac/vagrant-drupal
 

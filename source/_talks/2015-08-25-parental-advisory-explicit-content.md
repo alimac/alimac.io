@@ -1,8 +1,13 @@
 ---
 date: 2015-08-25
-event: DevOpsDays Chicago 2015
+event:
+  name: DevOpsDays Chicago 2015
+  website: http://www.devopsdays.org/events/2015-chicago
+  location: Chicago, IL
 title: Parental Advisory: Explicit Content
 header: /images/2015-08-25-parental-advisory-explicit-content/header.jpg
+video: https://www.youtube.com/watch?v=davk3yeIyKM
+youtube: davk3yeIyKM
 tags:
   - devops
 

@@ -1,8 +1,11 @@
 ---
 date: 2015-07-31
 title: Git for you and me
-event: DrupalCorn 2015
-slides:
+event:
+  name: DrupalCorn 2015
+  website: http://2015.drupalcorn.org
+  location: Cedar Falls, IA
+slides: http://alimac.github.io/git-for-you-and-me/
 video: https://www.youtube.com/watch?v=k6K6bZ0ZQL8
 youtube: k6K6bZ0ZQL8
 header: /images/2015-07-31-git-for-you-and-me/sourcetree.jpg

@@ -1,7 +1,10 @@
 ---
 date: 2015-09-23
 title: The Future of Mentoring
-event: DrupalCon Barcelona 2015
+event:
+  name: DrupalCon Barcelona 2015
+  website: https://events.drupal.org/barcelona2015
+  location: Barcelona, Spain
 tags:
   - drupal
   - mentoring

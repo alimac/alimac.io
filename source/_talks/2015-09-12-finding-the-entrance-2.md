@@ -1,7 +1,10 @@
 ---
 date: 2015-09-12
 title: Finding the entrance: Why and how to get involved with the Drupal community
-event: DrupalCamp Montréal
+event:
+  name: DrupalCamp Montréal
+  website: http://2015.drupalcampmontreal.com
+  location: Montréal, Canada
 tags:
   - drupal
   - open source

@@ -1,9 +1,13 @@
 ---
 date: 2015-03-20
 title: Let’s learn git
-event: MidCamp 2015
+event:
+  name: MidCamp 2015
+  website: http://2015.midcamp.org
+  location: Chicago, IL
 slides: http://alimac.github.io/lets-learn-git/#/
 video: https://www.youtube.com/watch?v=TjUVweE4azQ
+youtube: TjUVweE4azQ
 ---
 
 Git is a way to document changes to code or text (or code and text). It also

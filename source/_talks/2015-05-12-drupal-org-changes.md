@@ -1,6 +1,9 @@
 ---
 date: 2015-05-12
-event: DrupalCon Los Angeles 2015
+event:
+  name: DrupalCon Los Angeles 2015
+  website: https://events.drupal.org/losangeles2015
+  location: Los Angeles, CA
 title: Drupal.org changes to support first time contributors and mentors
 video: https://www.youtube.com/watch?v=jEie4ZnC47o
 slides: http://drupal-mentoring.github.io/d.o-new-contributors-mentors

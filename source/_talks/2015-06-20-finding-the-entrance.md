@@ -1,7 +1,10 @@
 ---
 date: 2015-06-20
 title: Finding the entrance: Why and how to get involved with the Drupal community
-event: St. Louis DrupalCamp 2015
+event:
+  name: St. Louis DrupalCamp 2015
+  website: https://2015.drupalstl.org
+  location: St. Louis, MO
 slides: http://alimac.github.io/finding-the-entrance/#/
 video: https://www.youtube.com/watch?v=9sVLjNTNzz0
 header: /images/2015-06-20-finding-the-entrance/isle-of-drupal-sea-routes.jpg
