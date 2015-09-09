@@ -58,3 +58,6 @@ blockquote p {
 .front-page .post-preview a h2 {
   font-size: 28px;
 }
+ul, ol {
+  margin-bottom: 30px;
+}
