@@ -3,7 +3,9 @@ date: 2015-07-31
 title: Git for you and me
 event: DrupalCorn 2015
 slides:
-video:
+video: https://www.youtube.com/watch?v=k6K6bZ0ZQL8
+youtube: k6K6bZ0ZQL8
+header: /images/2015-07-31-git-for-you-and-me/sourcetree.jpg
 ---
 
 Git is a way to document changes to code or text (or code and text). It also
