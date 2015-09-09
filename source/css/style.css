@@ -13,6 +13,8 @@
   background-size: cover;
 }
 
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .nav li a:hover,
 h2.section-heading a:hover,
 .post-preview>a:hover,
 .meta-section a:hover,
