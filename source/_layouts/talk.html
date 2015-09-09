@@ -1,13 +1,43 @@
 {% extends "default" %}
 
 {% block subheading %}
-{{ page.event }}
+{{ page.event.name }}
 {% endblock %}
 
 {% block content_wrapper %}
 <div class="container">
   <div class="row">
-    <div class="col-sm-10 blog-main">
+    <div class="col-sm-3 talk-meta">
+      <p>
+        <a href="{{ page.event.website }}">
+          <strong>{{ page.event.name }}</strong>
+        </a>
+        {% if page.event.location %}
+        <span class="location">
+          <i class="fa fa-map-marker"></i> {{ page.event.location }}
+        </span>
+        {% endif %}
+      </p>
+
+      <p>
+        {% if page.video %}
+        <a href="{{ page.video }}">
+          <i class="fa fa-fw fa-youtube-play"></i> Watch video</a> <br>
+        {% endif %}
+
+        {% if page.slides %}
+        <a href="{{ page.slides }}">
+          <i class="fa fa-fw fa-picture-o"></i> View slides</a> <br>
+        {% endif %}
+
+        {% if page.code %}
+        <a href="{{ page.code }}">
+          <i class="fa fa-fw fa-code"></i> Code repository</a> <br>
+        {% endif %}
+      </p>
+
+    </div>
+    <div class="col-sm-9 blog-main">
       <div class="blog-post">
 
 {% block content %}{% endblock %}

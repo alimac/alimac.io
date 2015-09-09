@@ -1,7 +1,13 @@
 .blog-post li a {
  text-decoration: underline;
 }
-
+.talk-meta a {
+  text-decoration: none;
+}
+.talk-meta .location {
+  display: block;
+  color: #999;
+}
 .intro-header {
   background: #404040 no-repeat center center;
   background-size: cover;
@@ -60,4 +66,8 @@ blockquote p {
 }
 ul, ol {
   margin-bottom: 30px;
+}
+.talk-meta {
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  background: #eee;
 }

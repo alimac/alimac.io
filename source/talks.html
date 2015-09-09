@@ -14,7 +14,7 @@ header: /images/2015-03-20-lets-learn-git/lets-learn-git-blur.jpg
   <div class="post-preview">
     <a href="{{ site.url }}{{ talk.url }}">
       <h2 class="post-title">{{ talk.title }} </h2>
-      <h3 class="post-subtitle">{{ talk.event }} </h3>
+      <h3 class="post-subtitle">{{ talk.event.name }} </h3>
     </a>
     {% include "talk-meta" with {talk_date: talk.date} %}
   </div>
@@ -31,7 +31,7 @@ header: /images/2015-03-20-lets-learn-git/lets-learn-git-blur.jpg
   <div class="post-preview">
     <a href="{{ site.url }}{{ talk.url }}">
       <h2 class="post-title">{{ talk.title }} </h2>
-      <h3 class="post-subtitle">{{ talk.event }} </h3>
+      <h3 class="post-subtitle">{{ talk.event.name }} </h3>
     </a>
     {% include "talk-meta" with {talk_date: talk.date} %}
   </div>
