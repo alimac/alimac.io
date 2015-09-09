@@ -14,7 +14,7 @@ tags:
 ---
 
 I gave an Ignite talk at DevOpsDays Chicago 2015. The format is a 5 minute
-presentation with 20 slides, auto-advanced every 15 minutes. The constraints
+presentation with 20 slides, auto-advanced every 15 seconds. The constraints
 made it a very interesting talk to plan and execute.
 
 ## Transcript
