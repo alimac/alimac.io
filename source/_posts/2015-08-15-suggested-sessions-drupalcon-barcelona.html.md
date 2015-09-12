@@ -27,7 +27,7 @@ will take a look inside Drupal 8 at 11:00 in [Altering, Extending, and Enhancing
 Drupal 8](https://events.drupal.org/barcelona2015/sessions/altering-extending-and-enhancing-drupal-8).
 Learn about hooks, plugins, events, and services and how they play together.
 
-After lunch, at 13:00 [tvn](https://www.drupal.org/u/eojthebrave) will discuss
+After lunch, at 13:00 [tvn](https://www.drupal.org/u/tvn) will discuss
 [Content Strategy for Drupal.org](https://events.drupal.org/barcelona2015/sessions/content-strategy-drupalorg).
 Come to this session if you want to know what is in store for drupal.org.
 
