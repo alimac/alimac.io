@@ -1,0 +1,24 @@
+{{ with .Params.event }}
+  {{ $eventLen := len . }}
+  {{ if gt $eventLen 0 }}
+  	<p>Presented at:</p>
+  	<ul>
+    {{ range $k, $v := . }}
+      <li><a href="{{ $v.website }}">{{ $v.name }}</a> in {{ $v.location }}</li>
+    {{ end }}
+    </ul>
+  {{ end }}
+{{ end }}
+
+{{ if or .Params.slides .Params.code }}
+  <p style="margin-bottom: 1em;">
+  {{ if .Params.slides }}<a href="{{ .Params.slides }}">View slides</a> for this talk.{{ end }}
+	{{ if .Params.code }}<a href="{{ .Params.code }}">Get the code</a> shown in this talk.{{ end }}
+  </p>
+{{ end }}
+
+{{ with .Params.youtube }}
+  <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  	<iframe src="//www.youtube.com/embed/{{ . }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+  </div>
+{{ end }}
