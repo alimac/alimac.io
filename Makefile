@@ -1,4 +1,10 @@
+# Website hostname, used to set:
+# - image and container names
+# - path to web root (in /tmp directory)
 WEBSITE=alimac.io
+
+# S3 bucket name
+S3_BUCKET=$(WEBSITE)
 
 # Look up CloudFront distribution ID based on website alias
 DISTRIBUTION_ID=$(shell aws cloudfront list-distributions \
@@ -43,7 +49,7 @@ deploy:
 	@# Build site
 	docker run --rm -it --volume `pwd`:/tmp/$(WEBSITE) $(WEBSITE) hugo
 	@# Upload files to S3
-	aws s3 sync --acl "public-read" --sse "AES256" public/ s3://$(WEBSITE) --exclude 'post'
+	aws s3 sync --acl "public-read" --sse "AES256" public/ s3://$(S3_BUCKET) --exclude 'post'
 	@# Invalidate caches
 	aws cloudfront create-invalidation --distribution-id $(DISTRIBUTION_ID) --paths '/*'
 
