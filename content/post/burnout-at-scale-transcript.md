@@ -370,7 +370,7 @@ outside life, and some capacity to monotask.
 > enough people and you are constantly firefighting without respite, your skills
 > are atrophying.”
 >
-> — Jennifer Davis and Katherine Daniels, Effective DevOps
+> — Jennifer Davis and Ryn Daniels, Effective DevOps
 
 This is a quote from *Effective DevOps*, which is another great book that I
 recommend.
