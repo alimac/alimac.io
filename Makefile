@@ -1,12 +1,23 @@
 WEBSITE=alimac.io
+
+# Look up CloudFront distribution ID based on website alias
 DISTRIBUTION_ID=$(shell aws cloudfront list-distributions \
 	--query 'DistributionList.Items[].[Id,Aliases.Items[?contains(@,`$(WEBSITE)`)==`true`]] | [0] | [0]' \
 	--output text)
 
+# Look up latest release of Hugo
+# https://github.com/gohugoio/hugo/releases/latest will automatically redirect
+# Get Location header, and extract the version number at the end of the URL
+HUGO_VERSION=$(shell curl -Is https://github.com/gohugoio/hugo/releases/latest \
+	| grep -Fi Location \
+	| sed -E 's/.*tag\/v(.*)/\1/g;')
+
 default: serve
 
 build:
-	docker build -t $(WEBSITE) .
+	docker build -t $(WEBSITE) . \
+		--build-arg HUGO=$(HUGO_VERSION) \
+		--build-arg WEB_DIR=/tmp/$(WEBSITE)
 
 serve: build
 	@# Look up IDs of any running containers and dispose of them
@@ -20,7 +31,7 @@ serve: build
 		--name $(WEBSITE) \
 		$(WEBSITE) \
 		hugo server --bind 0.0.0.0
-	@# Open website in a browser
+	@# Open website in a browser after 1 second
 	sleep 1
 	open http://localhost:1313
 
