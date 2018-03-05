@@ -6,7 +6,8 @@ categories:
 tags:
 keywords:
 - tech
-#thumbnailImage: //example.com/image.jpg
+showSocial: false
+comments: false
 ---
 
 When the word "values" comes up, people often think of one-word ideas, like ___honesty___ or __integrity__. When touted as organizational values, these are sometimes prefaced with adjectives intended to pump them up, such as "relentless" and "unstoppable".
