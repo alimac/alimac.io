@@ -14,14 +14,15 @@ My personal website, built with [Hugo](https://gohugo.io/) and now, Docker.
 
 The website (http://localhost:1313) will open in a new browser tab. When you make changes to the content, the change will automatically be reflected in the browser. Amazing!
 
-## Caveats
+## Theme
 
 The theme I use (https://themes.gohugo.io/hugo-tranquilpeak-theme/) is not included in this repository.
 
-## FAQ
+To install the theme:
 
-### Why not run `hugo` locally?
+1. `mkdir themes` (inside the cloned repo)
+1. `git clone git@github.com:kakawait/hugo-tranquilpeak-theme.git`
 
-I sure can, but I wanted to try it with Docker. I learned some new things, and reinforced previous learnings while getting this to work with Docker.
+## Acknowledgements
 
 I was inspired by a [talk by Carolyn Van Slyck](http://carolynvanslyck.com/talk/docker/go/#/) and https://github.com/carolynvs/carolynvanslyck.com/blob/source/Makefile.
