@@ -237,10 +237,6 @@ Next, Terraform creates the two S3 buckets:
 
 Additionally, Terraform will upload an HTML file to the primary domain bucket so that there is sample "Hello, world" content to view.
 
-Also, an _origin access identity_ is created for the primary domain CloudFront distribution, along with an S3 bucket policy. The identity and the policy will allow CloudFront to access the S3 bucket, while direct access to the objects is denied.
-
-Effectively, using a URL like `https://alimac.io/index.html` will work, but a direct URL referencing the S3 bucket `http://alimac.io.s3.amazonaws.com/index.html` will result in an *Access Denied* error.
-
 Source: https://github.com/alimac/terraform-s3/blob/master/buckets.tf
 
 ### CloudFront distributions
@@ -253,41 +249,13 @@ Terraform will create:
 2. A CloudFront distribution for the secondary domain and bucket
 3. Two A records that point to each distribution
 
-Each distribution will use the same multi-domain SSL certificate. The code for the two distributions is very similar, with notable differences in the `origin` section of each distribution.
+Each distribution will use the same multi-domain SSL certificate.
 
-Compare primary domain's **origin**, which uses S3 origin configuration:
-
-```
-origin {
-  domain_name = "${aws_s3_bucket.primary_domain.bucket_domain_name}"
-  origin_id = "S3-${var.primary_domain}"
-
-  s3_origin_config {
-    origin_access_identity = "${aws_cloudfront_origin_access_identity.primary_domain.cloudfront_access_identity_path}"
-  }
-}
-```
-https://github.com/alimac/terraform-s3/blob/master/cloudfront.tf#L8-L15
-
-With secondary domain's **origin**, which uses custom origin configuration:
-```
-origin {
-  domain_name = "${aws_s3_bucket.secondary_domain.website_endpoint}"
-  origin_id = "S3-${var.secondary_domain}"
-
-  custom_origin_config {
-    http_port = "80"
-    https_port = "443"
-    origin_protocol_policy = "http-only"
-    origin_ssl_protocols = ["TLSv1", "TLSv1.1", "TLSv1.2"]
-  }
-}
-```
-https://github.com/alimac/terraform-s3/blob/master/cloudfront.tf#L56-L66
-
-Using two CloudFront distributions - one for each bucket - was the key to solving the bug I mentioned earlier! If this seems like a complicated way to implement a redirect, I agree.
+Using two CloudFront distributions  - one for each bucket - instead of a single distribution was the key to solving the bug I mentioned earlier! If this seems like a complicated way to implement a redirect, I agree.
 
 CloudFront distributions support a list of `aliases`. It would be nice if one of aliases could be designated as a primary, and all other aliases redirected to the primary at the CloudFront layer.
+
+Source: https://github.com/alimac/terraform-s3/blob/master/cloudfront.tf
 
 ## End result
 
@@ -319,12 +287,6 @@ location: https://alimac.io/
 ```
 
 Also, both `http://alimac.io` and `http://www.alimac.io` should redirect to their HTTPS counterparts. Neat!
-
-## Improvements
-
-As I mentioned in the [AWS account](#aws-account) section, the set of policies for the IAM user could be further restricted.
-
-The S3 bucket policy does not guard against making an object public. By default, permissions on objects are private, but nothing prevents them being set to public by accident. This can be improved by adding *Deny* statements to the policy.
 
 What would you improve about this design? Which parts could be explained in more detail? Did you find this post useful? Ping me on Twitter [@alimacio](https://twitter.com/alimacio).
 
