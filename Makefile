@@ -8,7 +8,7 @@ S3_BUCKET=$(WEBSITE)
 
 # Look up CloudFront distribution ID based on website alias
 DISTRIBUTION_ID=$(shell aws cloudfront list-distributions \
-	--query 'DistributionList.Items[].[Id,Aliases.Items[?contains(@,`$(WEBSITE)`)==`true`]] | [0] | [0]' \
+	--query 'DistributionList.Items[].{id:Id,a:Aliases.Items}[?contains(a,`$(WEBSITE)`)].id' \
 	--output text)
 
 # Look up latest release of Hugo
