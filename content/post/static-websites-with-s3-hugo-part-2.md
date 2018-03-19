@@ -292,4 +292,12 @@ Now when I want to make changes to my website, I only have to remember these two
 1. `make`
 1. `make deploy`
 
-Sweet. What would you improve about this design? Which parts could be explained in more detail? Did you find this post useful? Ping me on Twitter [@alimacio](https://twitter.com/alimacio) to let me know.
+Sweet.
+
+You might be wondering why I involved Docker in this at all, why not use `hugo` that I installed with Homebrew?
+
+I was motivated to integrate Docker into the build and deploy process as a way to ease into working with Docker for other projects. Thanks to this effort, I now have a template I can use for projects that have more moving parts than building a static site with Hugo.
+
+I also like the appeal of reducing local dev environment requirements to `make` and Docker. It makes it easier for someone else to contribute to my project (for example, write a guest post).
+
+What would you improve about this design? Which parts could be explained in more detail? Did you find this post useful? Ping me on Twitter [@alimacio](https://twitter.com/alimacio) to let me know.
