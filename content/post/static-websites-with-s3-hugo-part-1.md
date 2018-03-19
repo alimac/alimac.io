@@ -251,11 +251,27 @@ Terraform will create:
 
 Each distribution will use the same multi-domain SSL certificate.
 
-Using two CloudFront distributions  - one for each bucket - instead of a single distribution was the key to solving the bug I mentioned earlier! If this seems like a complicated way to implement a redirect, I agree.
+Using two CloudFront distributions  - one for each bucket - instead of a single distribution was the key to solving the bug I mentioned earlier. If this seems like a complicated way to implement a redirect, I agree.
 
-CloudFront distributions support a list of `aliases`. It would be nice if one of aliases could be designated as a primary, and all other aliases redirected to the primary at the CloudFront layer.
+CloudFront distributions support a list of `aliases`. It would be nice if one of aliases could be designated as a primary, and all other aliases redirected to the primary at the CloudFront layer since this is where SSL termination takes place.
 
 Source: https://github.com/alimac/terraform-s3/blob/master/cloudfront.tf
+
+#### Origin types
+
+I wish AWS documentation explained the difference between origin types ([S3 origin versus custom origin](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistS3AndCustomOrigins.html)) a little clearer. My understanding is that if a bucket is configured as a website endpoint, you have to go with custom origin.
+
+Because of this, [traffic between CloudFront and the origin is not encrypted](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-https-cloudfront-to-s3-origin.html):
+
+> If your Amazon S3 bucket is configured as a website endpoint, you can't configure CloudFront to use HTTPS to communicate with your origin because Amazon S3 doesn't support HTTPS connections in that configuration.
+
+While it is possible to use an S3 origin instead of a custom origin, I found that this broke Hugo's default setting of [pretty URLs](https://gohugo.io/content-management/urls/#pretty-urls) for subpages. For instance, a request to `https://alimac.io/about/` rendered an error:
+
+> **NoSuchKey**
+
+> The specified key does not exist.
+
+One possibility would be to use [ugly URLs](https://gohugo.io/content-management/urls/#ugly-urls) instead. There might also be a way to use redirection rules on the bucket, but I am leaving this as something to research and test at another time.
 
 ## End result
 
@@ -288,5 +304,5 @@ location: https://alimac.io/
 
 Also, both `http://alimac.io` and `http://www.alimac.io` should redirect to their HTTPS counterparts. Neat!
 
-What would you improve about this design? Which parts could be explained in more detail? Did you find this post useful? Ping me on Twitter [@alimacio](https://twitter.com/alimacio).
+What would you improve about this design? Which parts could be explained in more detail? Did you find this post useful? Ping me on Twitter [@alimacio](https://twitter.com/alimacio) to let me know.
 
