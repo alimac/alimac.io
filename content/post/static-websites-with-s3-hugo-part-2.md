@@ -215,6 +215,49 @@ The container is given a name that is the same as the image (`alimac.io`).
 
 Finally, Hugo's built-in server is started and binds to `0.0.0.0`. This last bit is important! By default, Hugo binds to `127.0.0.1`, and the website will not work. I keep having to re-learn this ;)
 
+When I run `make`, I can expect to see output like this:
+
+```
+docker build -t alimac.io . \
+		--build-arg HUGO=0.37.1 \
+		--build-arg WEB_DIR=/tmp/alimac.io
+Sending build context to Docker daemon  111.8MB
+Step 1/8 : FROM ubuntu:artful
+ ---> a8ad041f5225
+Step 2/8 : ARG HUGO
+ ---> Using cache
+ ---> cc90b16bbcdf
+Step 3/8 : ARG WEB_DIR
+ ---> Using cache
+ ---> 2ee3512613ed
+Step 4/8 : RUN apt-get -qq update && apt-get -qq install curl
+ ---> Using cache
+ ---> 49fef3bd2185
+Step 5/8 : RUN curl -s -L https://github.com/gohugoio/hugo/releases/download/v${HUGO}/hugo_${HUGO}_Linux-64bit.deb -o hugo.deb
+ ---> Using cache
+ ---> 2b75af214968
+Step 6/8 : RUN dpkg -i hugo.deb
+ ---> Using cache
+ ---> 4fc0bcf0cc73
+Step 7/8 : RUN mkdir -p $WEB_DIR
+ ---> Using cache
+ ---> f778d72465bc
+Step 8/8 : WORKDIR $WEB_DIR
+ ---> Using cache
+ ---> a6673cbfb649
+Successfully built a6673cbfb649
+Successfully tagged alimac.io:latest
+docker ps --filter="name=alimac.io" -aq | xargs -n1 docker rm -f
+ea0cec128572
+docker run -d \
+		--volume `pwd`:/tmp/alimac.io \
+		--publish 1313:1313 \
+		--name alimac.io \
+		alimac.io \
+		hugo server --bind 0.0.0.0
+94b203cc5de930073418dd7738080ecd27b3461c1bd40730b5cf356f9f74e93d
+```
+
 ### Editing content
 
 This is an optional target.
