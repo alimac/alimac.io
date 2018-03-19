@@ -57,10 +57,15 @@ deploy:
 	aws cloudfront create-invalidation --distribution-id $(DISTRIBUTION_ID) --paths '/*'
 
 clean:
+	@# Stop and remove container
+	docker stop $(WEBSITE)
+	docker rm $(WEBSITE)
+
+clean-all:
 	@# Remove stopped containers
-	docker ps -aq --no-trunc | xargs docker rm
+	docker ps -aq -f status=exited --no-trunc | xargs docker rm
 
 	@# Remove dangling/untagged images
-	docker images -q --filter dangling=true | xargs docker rmi
+	docker images -q -f dangling=true --no-trunc | xargs docker rmi
 
-.PHONY: build serve deploy clean
+.PHONY: build serve edit deploy clean clean-all
