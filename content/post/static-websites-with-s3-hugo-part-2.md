@@ -12,10 +12,10 @@ showSocial: false
 comments: false
 ---
 
-I don't often go to meetups, but when I do... I get inspired to practice Continuous Adventure (CA), this time with Makefile, Docker, and Hugo.
+I don't often go to meetups, but when I do... I get inspired to practice Continuous Adventures (CA), this time with Makefile, Docker, and Hugo.
 <!--more-->
 
-In the first part of this series, I discussed how to [build a static website hosted on AWS Simple Storage Service (S3) with Terraform](static-websites-with-s3-hugo-part-1).
+In the first part of this series, I discussed how to [build a static website hosted on AWS Simple Storage Service (S3) with Terraform](/static-websites-with-s3-and-hugo-part-1).
 In this part, I will explain how I build and deploy my website, with a little help from Docker.
 
 When I first started using Hugo, I installed it on my laptop with Homebrew:
@@ -24,16 +24,18 @@ When I first started using Hugo, I installed it on my laptop with Homebrew:
 brew install hugo
 ```
 
-In between updates to the website, I would forget the exact syntax to start Hugo's built-in web server. Was it `hugo server` or `hugo --server`? I would also scratch my head and search through command history to locate the relevant AWS commands to deploy the updates to S3.
+And that was good. But in between updates to the website, I would end up forgetting the exact syntax to start Hugo's built-in web server. Was it `hugo server` or `hugo --server`? I would also scratch my head and search through command history to locate the relevant AWS commands to deploy the updates to S3.
 
-Fortunately, I was inspired by a [talk by Carolyn Van Slyck](http://carolynvanslyck.com/talk/docker/go/#/) about using Docker for Go projects. After studying https://github.com/carolynvs/carolynvanslyck.com/blob/source/Makefile I came up with a way to both document the build and deploy process, and then automate it down to two easy to remember commands.
+These are minor peeves, but there had to be a better way...
+
+Fortunately, I was inspired by a [talk by Carolyn Van Slyck](http://carolynvanslyck.com/talk/docker/go/#/) about using Docker for Go projects. After studying https://github.com/carolynvs/carolynvanslyck.com/blob/source/Makefile, I came up with a way to both document the build and deploy process, and then automate it down to two easy to remember commands.
 
 ## Prerequisites
 
 1. Make :) sure you can run `make` on your computer. It's been a while since I have done this, but my understanding is that if you type `make` into the Terminal on a Mac, you will get prompted to [install Command Line Tools](http://railsapps.github.io/xcode-command-line-tools.html) if they aren't already installed.
 2. [Install Docker](https://www.docker.com/community-edition).
 
-That's it. You do not have to install Hugo at all. Hugo will be installed and run in a container.
+That's it. You do not have to install Hugo at all. Shocking.
 
 Let's step through the two files needed for this, `Dockerfile` which defines the container image, and `Makefile` which abstracts all the commands needed to run a local Hugo site, and then to deploy updated files to S3.
 

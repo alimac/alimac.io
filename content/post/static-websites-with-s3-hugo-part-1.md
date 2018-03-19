@@ -68,7 +68,7 @@ For the hosting platform, I am using Amazon Web Services (AWS), with the followi
 - **CloudFront** for content delivery
 - **S3** for storage
 
-For new accounts, AWS offers a free tier for one year. Outside of the free tier, the cost of hosting the site (given its traffic) is less than $1/month:
+For new accounts, AWS offers a free tier for one year. Outside of the free tier, the cost of hosting my website (given its size and traffic) is less than $1/month:
 
 | Component     | Cost per month |
 |:-------------:|:---------------|
@@ -94,7 +94,7 @@ Alternatively, use a more limited set of policies:
 - *AmazonS3FullAccess*
 - *AWSCertificateManagerFullAccess*
 
-Access can be restricted even further. In fact, I just created a todo to figure out the minimum access needed :)
+Access can be restricted even further. In fact, I just created a todo to figure out the minimum access needed.
 
 [Install AWS command line interface](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) (CLI) and [configure your AWS profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) with the `aws configure --profile myprofile` command. You will be prompted to provide the access key ID and the access key.
 
@@ -109,7 +109,9 @@ I recommend using `us-east-1`, because CloudFront will only work with SSL certif
 
 ### Terraform
 
-[Install Terraform](https://www.terraform.io/intro/getting-started/install.html). Terraform is a tool for storing your infrastructure setup as code. Or, *"an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned"*.
+[Install Terraform](https://www.terraform.io/intro/getting-started/install.html).
+
+Terraform is a tool for storing your infrastructure setup as code. Or, as HashiCorp says, *"an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned"*.
 
 The idea of immutable architecture is very interesting to me, especially figuring out where we choose to draw the boundaries of immutability. This [blog post](https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c) has a pretty good overview of Terraform, and how it compares to tools like Chef, Puppet, Ansible, Salt, or CloudFormation.
 
@@ -117,7 +119,7 @@ If you are new to Terraform, [Getting Started](https://www.terraform.io/intro/ge
 
 ## Steps
 
-Here are the steps Terraform will automate:
+Terraform will automate setting up the AWS components for my website:
 
 1. **Create a hosted zone** for the custom domain.
 2. **Generate the SSL certificate**, using DNS for domain validation.
@@ -130,7 +132,7 @@ Here is a diagram of the setup for *alimac.io*:
   alt="Diagram showing AWS components: hosted zone, A records, CloudFront distributions, SSL certificate, and S3 buckets">
 
 
-Sidenote: I created the preceding diagram using [mermaid](https://mermaidjs.github.io/). Here is the code:
+Sidenote: I created the preceding diagram using [mermaid](https://mermaidjs.github.io/), which is pretty cool. This is the code behind the graph:
 
 ```
 graph TD
@@ -166,7 +168,7 @@ Terraform will prompt you to provide two variables:
 
 The S3 bucket names will be set to the primary and secondary domain, respectively.
 
-If you don't want to be prompted for the variable values each time, create a file named `terraform.tfvars` and set the values for each (substitute the domain for your own):
+If you don't want to be prompted for the variable values each time, create a file with the extension `.tfvars` and set the values for each (substitute the domain for your own):
 
 ```
 primary_domain = "example.com"
@@ -175,7 +177,7 @@ secondary_domain = "www.example.com"
 
 ### Note about name severs
 
-AWS will assign random name servers for your hosted zone. If, like me, you are not using AWS as your domain registrar, you will have to update the name servers associated with your domain using your registrar's website. Depending on your registrar, it may take some time before the update takes effect.
+AWS will assign random name servers for your hosted zone. If, like me, you are not using AWS as your domain registrar, you will have to update the name servers associated with your domain. That means using your registrar's website to enter the name server hostnames. Depending on your registrar, it may take some time before this update takes effect.
 
 To mitigate this, you can create the hosted zone first (and no other components) by using the `-target` attribute:
 
@@ -265,6 +267,8 @@ Because of this, [traffic between CloudFront and the origin is not encrypted](ht
 
 > If your Amazon S3 bucket is configured as a website endpoint, you can't configure CloudFront to use HTTPS to communicate with your origin because Amazon S3 doesn't support HTTPS connections in that configuration.
 
+Hmm. I am not happy about this. Ideally, I would like to have end-to-end encryption.
+
 While it is possible to use an S3 origin instead of a custom origin, I found that this broke Hugo's default setting of [pretty URLs](https://gohugo.io/content-management/urls/#pretty-urls) for subpages. For instance, a request to `https://alimac.io/about/` rendered an error:
 
 > **NoSuchKey**
@@ -305,4 +309,3 @@ location: https://alimac.io/
 Also, both `http://alimac.io` and `http://www.alimac.io` should redirect to their HTTPS counterparts. Neat!
 
 What would you improve about this design? Which parts could be explained in more detail? Did you find this post useful? Ping me on Twitter [@alimacio](https://twitter.com/alimacio) to let me know.
-
