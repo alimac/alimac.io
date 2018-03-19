@@ -10,7 +10,7 @@ My personal website, built with [Hugo](https://gohugo.io/) and now, Docker.
 
 1. Clone the GitHub repo: `git clone git@github.com:alimac/alimac.io.git`
 1. `cd alimac.io`
-1. Run `make` to build and run the container.
+1. Run `make` to build the image and run the container.
 
 The website (http://localhost:1313) will open in a new browser tab. When you make changes to the content, the change will automatically be reflected in the browser. Amazing!
 
