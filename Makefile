@@ -37,9 +37,12 @@ serve: build
 		--name $(WEBSITE) \
 		$(WEBSITE) \
 		hugo server --bind 0.0.0.0
-	@# Open website in a browser after 1 second
-	sleep 1
+
+edit:
+	@# Open website in the default browser
 	open http://localhost:1313
+	@# Open local directory in VS Code
+	code-insiders .
 
 deploy:
 	@# Delete .DS_Store files, they are the bane of existence
