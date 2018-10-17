@@ -16,7 +16,7 @@ I don't often update my website, but when I do... I switch to another static sit
 <!--more-->
 
 In the first part of this series, I will discuss how to build a static website hosted on AWS Simple Storage Service (S3) with Terraform.
-In the second part, I will focus on my website [build and deploy process with Hugo and Docker](/static-websites-with-s3-hugo-part-2).
+In the second part, I will focus on my website [build and deploy process with Hugo and Docker](/static-websites-with-s3-and-hugo-part-2).
 
 ## Goals
 
