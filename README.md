@@ -8,7 +8,7 @@ My personal website, built with [Hugo](https://gohugo.io/) and now, Docker.
 
 ## Usage
 
-1. Clone the GitHub repo: `git clone git@github.com:alimac/alimac.io.git`
+1. Clone the GitHub repo: `git clone git clone https://github.com/alimac/alimac.io.git`
 1. `cd alimac.io`
 1. Run `make` to build the image and run the container.
 
